@@ -6,8 +6,8 @@
   },
   "graphic": {
     "screen": {
-      "width": 2560,
-      "height": 1600
+      "width": 1920,
+      "height": 1080
     },
     "fullscreen": false,
     "vsync": false,
