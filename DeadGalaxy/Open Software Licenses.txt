@@ -2,11 +2,9 @@
 
 The project uses parts of code / libraries / functionality from the open software listed in this document.
 
-The project itself doesn't licensed under one of following licenses.
-
 ===========================================================================================
 
-1. Raylib
+1. raylib
 https://github.com/raysan5/raylib
 
 Zlib License
