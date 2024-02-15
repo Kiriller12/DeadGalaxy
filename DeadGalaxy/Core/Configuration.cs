@@ -160,8 +160,8 @@ namespace DeadGalaxy.Core
             }
 
             // Retrieving screen width and height from config
-            var width = _instance.GetValue<int>("graphic:screen:width");
-            var height = _instance.GetValue<int>("graphic:screen:height");
+            var width = Get<int>("graphic:screen:width");
+            var height = Get<int>("graphic:screen:height");
 
             // Retrieving screen width and height of current monitor
             var monitor = Raylib.GetCurrentMonitor();
@@ -196,7 +196,7 @@ namespace DeadGalaxy.Core
             }
 
             // If current fullscreen state needs to be changed
-            var fullscreen = _instance.GetValue<bool>("graphic:fullscreen");
+            var fullscreen = Get<bool>("graphic:fullscreen");
             if (Raylib.IsWindowFullscreen() == fullscreen)
             {
                 return;
@@ -215,7 +215,7 @@ namespace DeadGalaxy.Core
                 return;
             }
 
-            if (_instance.GetValue<bool>("graphic:vsync"))
+            if (Get<bool>("graphic:vsync"))
             {
                 Raylib.SetWindowState(ConfigFlags.VSyncHint);
             }
@@ -236,7 +236,7 @@ namespace DeadGalaxy.Core
             }
 
             // Setting FPS lock
-            var fpsLock = _instance.GetValue<int>("graphic:fpsLock");
+            var fpsLock = Get<int>("graphic:fpsLock");
             if (fpsLock >= 30)
             {
                 Raylib.SetTargetFPS(fpsLock);
@@ -259,8 +259,8 @@ namespace DeadGalaxy.Core
             }
 
             // Setting scene textures filtering and mipmaps
-            var mipmaps = _instance.GetValue<bool>("graphic:mipmaps");
-            var filter = _instance.GetValue<TextureFilter>("graphic:filtering");
+            var mipmaps = Get<bool>("graphic:mipmaps");
+            var filter = Get<TextureFilter>("graphic:filtering");
 
             foreach (var (_, texture) in Scene.Main.TextureResources)
             {
@@ -279,7 +279,7 @@ namespace DeadGalaxy.Core
                 return;
             }
 
-            var masterVolume = _instance.GetValue<float>("sound:master");
+            var masterVolume = Get<float>("sound:master");
             Raylib.SetMasterVolume(masterVolume);
         }
 
@@ -293,7 +293,7 @@ namespace DeadGalaxy.Core
                 return;
             }
 
-            //var musicVolume = _instance.GetValue<float>("sound:music");
+            //var musicVolume = Get<float>("sound:music");
             //Raylib.SetMusicVolume(music, musicVolume);
             // TODO implement music system and apply setting
         }
@@ -308,7 +308,7 @@ namespace DeadGalaxy.Core
                 return;
             }
 
-            //var effectsVolume = _instance.GetValue<float>("sound:effects");
+            //var effectsVolume = Get<float>("sound:effects");
             //Raylib.SetSoundVolume(sound, effectsVolume);
             // TODO implement sound system and apply setting
         }

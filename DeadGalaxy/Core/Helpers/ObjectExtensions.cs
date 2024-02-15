@@ -29,7 +29,7 @@ namespace DeadGalaxy.Core.Helpers
         /// <param name="target">Target object</param>
         public static T? Convert<T>(this object target)
         {
-            return (T?)Convert(target, typeof(T));
+            return (T?)target.Convert(typeof(T));
         }
 
         /// <summary>
@@ -55,7 +55,9 @@ namespace DeadGalaxy.Core.Helpers
             }
             catch
             {
-                return default;
+                return type.IsValueType 
+                    ? Activator.CreateInstance(type) 
+                    : null;
             }
         }
     }
