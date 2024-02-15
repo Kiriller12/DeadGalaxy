@@ -26,6 +26,8 @@ namespace DeadGalaxy.Core
     /// </summary>
     internal class Console
     {
+        private const int ConsoleHeight = 270;
+
         private static readonly Color Background = new(0, 0, 0, 200);
         private static readonly Color Input = new(50, 50, 50, 200);
         private static readonly Color InputHover = new(75, 75, 75, 200);
@@ -220,7 +222,7 @@ namespace DeadGalaxy.Core
             var width = Raylib.GetScreenWidth();
             var height = Raylib.GetScreenHeight();
 
-            Raylib.DrawRectangle(0, 0, width, 270, Background);
+            Raylib.DrawRectangle(0, 0, width, ConsoleHeight, Background);
 
             var inputBackColor = _isInputActive 
                 ? InputActive 
@@ -228,7 +230,7 @@ namespace DeadGalaxy.Core
                     ? InputHover 
                     : Input;
 
-            Raylib.DrawRectangle(8, height / 4 - 32 - 16, width - 16, 32, inputBackColor);
+            Raylib.DrawRectangle(8, ConsoleHeight - 32 - 16, width - 16, 32, inputBackColor);
 
             // Trimming text start if it is too long
             var inputText = _inputText;
@@ -247,7 +249,7 @@ namespace DeadGalaxy.Core
                 inputText = $"{inputText}|";
             }
 
-            Raylib.DrawText(inputText, 16, height / 4 - 32 - 10, 20, Color.White);
+            Raylib.DrawText(inputText, 16, ConsoleHeight - 32 - 10, 20, Color.White);
 
             var logText = _output.TakeLast(8).ToList();
             for (var i = 0; i < logText.Count; i++)
