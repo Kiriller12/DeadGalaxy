@@ -23,6 +23,18 @@ Project still under active development, anything in this repo is subject to chan
 - Logging with automatic saving to file and debug console
 - World model based on raylib's "cubicmesh" generation algorithm
 
+### Controls
+
+W, A, S, D: camera movement\
+Q, E: camera rotation\
+F1: debug console
+
+### Debug console commands
+
+help - commands help\
+load \<scene\> - loads game scene by its name\
+set \<setting\> \<value\> - sets configuration setting value
+
 ## Video preview
 
 Click on image to watch video or use link:\
