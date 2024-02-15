@@ -23,6 +23,13 @@ Project still under active development, anything in this repo is subject to chan
 - Logging with automatic saving to file and debug console
 - World model based on raylib's "cubicmesh" generation algorithm
 
+## Video preview
+
+Click on image to watch video or use link:\
+https://youtu.be/peX24NMFGS0
+
+[![Watch the video](https://img.youtube.com/vi/peX24NMFGS0/maxresdefault.jpg)](https://youtu.be/peX24NMFGS0)
+
 ## Contribution
 
 Fill free to create issues and proposals.\
