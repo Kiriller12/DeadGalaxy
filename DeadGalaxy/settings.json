@@ -1,0 +1,29 @@
+{
+  "debug": {
+    "fps": true,
+    "rendering": true,
+    "console": true
+  },
+  "graphic": {
+    "screen": {
+      "width": 1920,
+      "height": 1080
+    },
+    "fullscreen": false,
+    "vsync": false,
+    "fpsLock": 60,
+    "filtering": 5,
+    "mipmaps": true
+  },
+  "sound": {
+    "master": 1.0,
+    "music": 1.0,
+    "effects": 1.0
+  },
+  "input": {
+    "sensitivity": 1.0
+  },
+  "game": {
+
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "resources": [
+    {
+      "name": "Atlas",
+      "type": 1,
+      "filePath": "Atlas.png"
+    },
+    {
+      "name": "AtlasNormal",
+      "type": 1,
+      "filePath": "AtlasNormal.png"
+    },
+    {
+      "name": "AtlasSpecular",
+      "type": 1,
+      "filePath": "AtlasSpecular.png"
+    }
+  ],
+  "entities": [
+    {
+      "name": "MainCamera",
+      "type": 4,
+      "properties": {
+        "position": {
+          "x": 1.8,
+          "y": 0.5,
+          "z": 1
+        },
+        "target": {
+          "x": 3,
+          "y": 0.65,
+          "z": 1.2
+        },
+        "isMain": true
+      }
+    },
+    {
+      "name": "World",
+      "type": 3,
+      "properties": {
+        "chunkCount": 1,
+        "chunkSize": 16,
+        "mapPath": "Map.png",
+        "diffuseTexture": {
+          "name": "Atlas",
+          "resolveType": 1
+        },
+        "normalTexture": {
+          "name": "AtlasNormal",
+          "resolveType": 1
+        },
+        "specularTexture": {
+          "name": "AtlasSpecular",
+          "resolveType": 1
+        },
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "name": "Light1",
+      "type": 5,
+      "properties": {
+        "position": {
+          "x": 6.8,
+          "y": 0.25,
+          "z": 2.5
+        },
+        "radius": 5.0,
+        "intensity": 2.0,
+        "color": {
+          "R": 0,
+          "G": 121,
+          "B": 241,
+          "A": 255
+        }
+      }
+    },
+    {
+      "name": "Light2",
+      "type": 5,
+      "properties": {
+        "position": {
+          "x": 10.8,
+          "y": 0.25,
+          "z": 1.5
+        },
+        "radius": 3.0,
+        "intensity": 3.0,
+        "color": {
+          "R": 230,
+          "G": 41,
+          "B": 55,
+          "A": 255
+        }
+      }
+    }
+  ]
+}
