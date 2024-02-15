@@ -47,9 +47,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Open Software Licenses.txt">
+    <None Include="..\LICENSE.txt" Link="LICENSE.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="..\Open Software Licenses.txt" Link="Open Software Licenses.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="settings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
