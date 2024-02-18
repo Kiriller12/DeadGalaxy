@@ -104,5 +104,14 @@ namespace DeadGalaxy.Core.Entities
         {
             Raylib.EndMode3D();
         }
+
+        /// <summary>
+        /// Returns screen space position coordinates
+        /// </summary>
+        /// <param name="worldPosition">World space position</param>
+        public Vector2 GetScreenPosition(Vector3 worldPosition)
+        {
+            return Raylib.GetWorldToScreen(worldPosition, _camera);
+        }
     }
 }

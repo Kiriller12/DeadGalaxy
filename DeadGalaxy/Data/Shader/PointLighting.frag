@@ -45,7 +45,7 @@ uniform Light[MaxLights] lights;
 out vec4 finalColor;
 
 // Calculates world position from depth
-vec3 getWorldPosition(float depth) 
+vec3 getWorldPosition(float depth)
 {
 	vec3 direction = normalize(fragPosition - viewPos);
 	
@@ -83,7 +83,7 @@ void main()
     vec3 lighting = vec3(0.0);
     for (int i = 0; i < lightsCount; i++)
     {
-        // If light radius too small, skipping it
+        // If light radius is too small, skipping
         if(length(lights[i].radius) < 0.001)
         {
             continue;
@@ -93,16 +93,30 @@ void main()
         float dist = length(lights[i].position - pixelPosition);
         if(dist < lights[i].radius)
         {
+            // Calculating light attenuation
+            float attenuation = getLightAttenuation(dist, lights[i].radius, lights[i].intensity, 1.0);
+
+            // If light attenuation is too small, skipping
+            if(attenuation < 0.001)
+            {
+                continue;
+            }
+
             // Calculating diffuse lighting
             vec3 lightDir = normalize(lights[i].position - pixelPosition);
-            vec3 diffuseLight = max(dot(normal, lightDir), 0.0) * diffuse;
+            float lightValue = max(dot(normal, lightDir), 0.0);
+
+            // If light value is too small, skipping
+            if(lightValue < 0.001)
+            {
+                continue;
+            }
+
+            vec3 diffuseLight = lightValue * diffuse;
 
             // Calculating specular lighting
             vec3 halfwayDir = normalize(lightDir + viewDir); 
             vec3 specularLight = pow(max(dot(normal, halfwayDir), 0.0), 16.0) * specular;
-
-            // Calculating light attenuation
-            float attenuation = getLightAttenuation(dist, lights[i].radius, lights[i].intensity, 1.0);
 
             // Accumulating light
             lighting += (diffuseLight + specularLight) * lights[i].color * attenuation;
