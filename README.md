@@ -2,7 +2,7 @@
 
 "DeadGalaxy" — small shooter game/engine project based on raylib and .NET 8.
 
-Project still under active development, anything in this repo is subject to change.
+The project is still under active development, anything in this repo is a subject to change.
 
 ## Features
 
@@ -12,7 +12,7 @@ Project still under active development, anything in this repo is subject to chan
   - Final rendering stage
   - Debug rendering stage
 - Flexible scene loading featuring linked resources and entities loading
-- Flexible configuration management with automatic saving changes to file
+- Flexible configuration management with automatic saving to the file
 - In-game debug information overlay
   - Rendering stages preview
   - FPS counter
@@ -20,8 +20,8 @@ Project still under active development, anything in this repo is subject to chan
   - Help command
   - Level loading command
   - Configuration value set command
-- Logging with automatic saving to file and debug console
-- World model based on raylib's "cubicmesh" generation algorithm
+- Logging with automatic saving to the file and debug console
+- World model based on the raylib's "cubicmesh" generation algorithm
 
 ### Controls
 
@@ -37,7 +37,7 @@ set \<setting\> \<value\> - sets configuration setting value
 
 ## Video preview
 
-Click on image to watch video or use link:\
+Click on the image to watch video or use the following link:\
 https://youtu.be/peX24NMFGS0
 
 [![Watch the video](https://img.youtube.com/vi/peX24NMFGS0/maxresdefault.jpg)](https://youtu.be/peX24NMFGS0)
@@ -45,7 +45,7 @@ https://youtu.be/peX24NMFGS0
 ## Contribution
 
 Fill free to create issues and proposals.\
-I will also be glad any help.
+I will also be glad for any help.
 
 ## Open software licenses
 
@@ -55,11 +55,11 @@ This project uses open software licensed under various licenses:
 - [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
 - [Texture packs by Philip Klevestav](https://philipk.net)
 
-Full license texts available in Open Software Licenses file.
+Full license texts are available in the Open Software Licenses file.
 
 ## License
 
-Developed by  [Kabanov Kirill (@Kiriller12)](https://github.com/Kiriller12)
+Developed by [Kabanov Kirill (@Kiriller12)](https://github.com/Kiriller12)
 
 Licensed under GNU General Public License v3.0.\
-Full license text available in LICENCE file.
+Full license text is available in the LICENCE file.
