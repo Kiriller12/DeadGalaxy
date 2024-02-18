@@ -7,10 +7,10 @@ The project is still under active development, anything in this repo is a subjec
 ## Features
 
 - Deferred rendering pipeline (implementing deferred lighting for point lights)
-  - Geometry rendering stage
-  - Point lights rendering stage
-  - Final rendering stage
-  - Debug rendering stage
+  - Geometry rendering => Diffuse, Normal, Specular, Depth textures
+  - Point lights rendering => Light texture (Diffuse light + Specular light)
+  - Final rendering => Final image generation
+  - Debug rendering overlay
 - Flexible scene loading featuring linked resources and entities loading
 - Flexible configuration management with automatic saving to the file
 - In-game debug information overlay
