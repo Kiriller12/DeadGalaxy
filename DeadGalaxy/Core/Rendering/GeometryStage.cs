@@ -32,7 +32,7 @@ namespace DeadGalaxy.Core.Rendering
         public GeometryStage()
         {
             // Loading shader
-            Shader = Raylib.LoadShader("Data/Shader/Geometry.vert", "Data/Shader/Geometry.frag");
+            Shader = Raylib.LoadShader("Data/Shaders/geometry.vert", "Data/Shaders/geometry.frag");
 
             // Setting shader locations
             Shader.SetLocation(ShaderLocationIndex.MapDiffuse,"diffuseTexture");

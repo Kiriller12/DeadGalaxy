@@ -37,7 +37,7 @@ namespace DeadGalaxy.Core.Rendering
         public FinalStage()
         {
             // Loading shader
-            Shader = Raylib.LoadShader(null, "Data/Shader/Final.frag");
+            Shader = Raylib.LoadShader(null, "Data/Shaders/final.frag");
 
             // Setting shader locations
             _diffuseLocation = Raylib.GetShaderLocation(Shader, "diffuseTexture");

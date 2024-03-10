@@ -42,7 +42,7 @@ namespace DeadGalaxy.Core.Rendering
         public PointLightingStage()
         {
             // Loading shader
-            _shader = Raylib.LoadShader("Data/Shader/PointLighting.vert", "Data/Shader/PointLighting.frag");
+            _shader = Raylib.LoadShader("Data/Shaders/pointLighting.vert", "Data/Shaders/pointLighting.frag");
 
             // Setting shader locations
             _shader.SetLocation(ShaderLocationIndex.MapDiffuse, "diffuseTexture");
